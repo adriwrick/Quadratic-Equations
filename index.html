@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        .timer {
+            font-size: 2em;
+            color: #ff5722;
+            margin: 10px;
+        }
+        .quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .question {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .question img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            display: block;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>Mathematics Quiz: Quadratic Equations and Parabolas</header>
+    <div class="timer" id="timer">Time Remaining: 5:00</div>
+    <div class="quiz-container" id="quiz-container">
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Equation of (x+1)<sup>2</sup> - x<sup>2</sup> = 0 has number of real roots equal to:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="a"> (a) 1</li>
+                    <li><input type="radio" name="q1" value="b"> (b) 2</li>
+                    <li><input type="radio" name="q1" value="c"> (c) 3</li>
+                    <li><input type="radio" name="q1" value="d"> (d) 4</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>2. The roots of 100x<sup>2</sup> – 20x + 1 = 0 are:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="a"> (a) 1/20 and 1/20</li>
+                    <li><input type="radio" name="q2" value="b"> (b) 1/10 and 1/20</li>
+                    <li><input type="radio" name="q2" value="c"> (c) 1/10 and 1/10</li>
+                    <li><input type="radio" name="q2" value="d"> (d) None of the above</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>3. The sum of two numbers is 27 and product is 182. The numbers are:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="a"> (a) 12 and 13</li>
+                    <li><input type="radio" name="q3" value="b"> (b) 13 and 14</li>
+                    <li><input type="radio" name="q3" value="c"> (c) 12 and 15</li>
+                    <li><input type="radio" name="q3" value="d"> (d) 13 and 24</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>4. If ½ is a root of the quadratic equation x<sup>2</sup> - mx - 5/4 = 0, then value of m is:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q4" value="a"> (a) 2</li>
+                    <li><input type="radio" name="q4" value="b"> (b) -2</li>
+                    <li><input type="radio" name="q4" value="c"> (c) -3</li>
+                    <li><input type="radio" name="q4" value="d"> (d) 3</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>5. The altitude of a right triangle is 7 cm less than its base. If the hypotenuse is 13 cm, the other two sides of the triangle are equal to:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q5" value="a"> (a) Base=10cm and Altitude=5cm</li>
+                    <li><input type="radio" name="q5" value="b"> (b) Base=12cm and Altitude=5cm</li>
+                    <li><input type="radio" name="q5" value="c"> (c) Base=14cm and Altitude=10cm</li>
+                    <li><input type="radio" name="q5" value="d"> (d) Base=12cm and Altitude=10cm</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>6. The roots of quadratic equation 2x<sup>2</sup> + x + 4 = 0 are:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q6" value="a"> (a) Positive and negative</li>
+                    <li><input type="radio" name="q6" value="b"> (b) Both Positive</li>
+                    <li><input type="radio" name="q6" value="c"> (c) Both Negative</li>
+                    <li><input type="radio" name="q6" value="d"> (d) No real roots</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>7. The sum of the reciprocals of Rehman’s ages 3 years ago and 5 years from now is 1/3. The present age of Rehman is:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q7" value="a"> (a) 7</li>
+                    <li><input type="radio" name="q7" value="b"> (b) 10</li>
+                    <li><input type="radio" name="q7" value="c"> (c) 5</li>
+                    <li><input type="radio" name="q7" value="d"> (d) 6</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>8. If one root of equation 4x<sup>2</sup> - 2x + k - 4 = 0 is reciprocal of the other. The value of k is:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q8" value="a"> (a) -8</li>
+                    <li><input type="radio" name="q8" value="b"> (b) 8</li>
+                    <li><input type="radio" name="q8" value="c"> (c) -4</li>
+                    <li><input type="radio" name="q8" value="d"> (d) 4</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>9. A train travels 360 km at a uniform speed. If the speed had been 5 km/h more, it would have taken 1 hour less for the same journey. Find the speed of the train:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q9" value="a"> (a) 30 km/hr</li>
+                    <li><input type="radio" name="q9" value="b"> (b) 40 km/hr</li>
+                    <li><input type="radio" name="q9" value="c"> (c) 50 km/hr</li>
+                    <li><input type="radio" name="q9" value="d"> (d) 60 km/hr</li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>10. A quadratic equation ax<sup>2</sup> + bx + c = 0 has no real roots, if:</p>
+                <ul class="options">
+                    <li><input type="radio" name="q10" value="a"> (a) b<sup>2</sup> – 4ac > 0</li>
+                    <li><input type="radio" name="q10" value="b"> (b) b<sup>2</sup> – 4ac = 0</li>
+                    <li><input type="radio" name="q10" value="c"> (c) b<sup>2</sup> – 4ac < 0</li>
+                    <li><input type="radio" name="q10" value="d"> (d) b<sup>2</sup> – ac < 0</li>
+                </ul>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+    </div>
+
+    <div class="results" id="results" style="display:none;"></div>
+
+    <script>
+        const timerElement = document.getElementById('timer');
+        let timeRemaining = 300; // 5 minutes in seconds
+
+        const questions = [
+            { question: "1", correct: "a" },
+            { question: "2", correct: "c" },
+            { question: "3", correct: "b" },
+            { question: "4", correct: "b" },
+            { question: "5", correct: "b" },
+            { question: "6", correct: "d" },
+            { question: "7", correct: "a" },
+            { question: "8", correct: "b" },
+            { question: "9", correct: "b" },
+            { question: "10", correct: "c" }
+        ];
+
+        function updateTimer() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            timerElement.textContent = `Time Remaining: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            if (timeRemaining > 0) {
+                timeRemaining--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                submitQuiz(); // Auto-submit on timeout
+            }
+        }
+
+        function submitQuiz() {
+            const form = document.getElementById('quiz-form');
+            const formData = new FormData(form);
+            let score = 0;
+            let output = "<h2>Quiz Results</h2><ul>";
+
+            questions.forEach(({ question, correct }) => {
+                const userAnswer = formData.get(question);
+                if (userAnswer === correct) {
+                    score++;
+                    output += `<li>Question ${question}: Correct</li>`;
+                } else {
+                    output += `<li>Question ${question}: Incorrect (Correct Answer: ${correct})</li>`;
+                }
+            });
+
+            output += `</ul><p>Your Score: ${score} / ${questions.length}</p>`;
+            document.getElementById('results').innerHTML = output;
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('quiz-container').style.display = 'none';
+        }
+
+        updateTimer();
+    </script>
+</body>
+</html>
